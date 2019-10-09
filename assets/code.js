@@ -81,7 +81,7 @@ function displayNewData(data) {
     var data = {id: parseInt(this.parentNode.id), name: this.textContent, email: editable[1].textContent};
     var transaction = idb.update(db, 'users', data.id, data);
     transaction.then(e => {
-      notification('User updated.', 'info', 5000);
+      notification(`User ${data.id} updated`, 'info', 5000);
     })
     transaction.onerror = error;
   }, false);
@@ -89,7 +89,7 @@ function displayNewData(data) {
     var data = {id: parseInt(this.parentNode.id), name: editable[0].textContent, email: this.textContent};
     var transaction = idb.update(db, 'users', data.id, data);
     transaction.then(e => {
-      notification('User updated.', 'info', 5000);
+      notification(`User ${data.id} updated`, 'info', 5000);
     })
     transaction.onerror = error;
   }, false);
