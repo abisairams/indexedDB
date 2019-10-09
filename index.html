@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Un ejemplo completo, simple y rapido sobre la API indexedDB.">
+    <meta name="author" content="Abisai Ramos">
+    <title>IndexedDB example</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <h2 class="header">IndexedDB API</h2>
+    <form name="register" method="post" autocomplete="off">
+      <h2 class="title">Save your data</h2>
+      <input type="text" name="username" placeholder="Username" autofocus>
+      <input type="email" name="useremail" placeholder="user@mail.com">
+      <input type="submit" name="submit" value="Save user">
+    </form>
+
+    <div class="userDB">
+      <h2 class="title">Users registered</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody id="list">
+
+        </tbody>
+      </table>
+    </div>
+    <div class="message-container" id="message-container">
+
+    </div>
+    <script src="assets/indexedDB.js" charset="utf-8"></script>
+    <script src="assets/code.js" charset="utf-8"></script>
+  </body>
+</html>

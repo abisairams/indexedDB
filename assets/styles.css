@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: arial;
+  font-size: 16px;
+}
+h2.header {
+  padding-bottom: 5px;
+  margin: 10px 20px;
+  font-family: ubuntu, arial;
+  font-size: 2em;
+}
+form, div.userDB {
+  background: #4b6429;
+  float: left;
+  margin-left: 20px;
+  max-width: 400px;
+  padding: 30px 20px;
+}
+h2.title {
+  color: #fff;
+  font-family: ubuntu, arial;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+form input {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background: none;
+  display: block;
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  outline-color: #fff;
+}
+form input[type='submit'] {
+  background: #330101;
+  border: 2px solid rgb(6, 86, 54);
+  border-radius: 6px;
+  margin: 60px auto 10px;
+  padding: 25px 25px;
+  line-height: 0;
+  width: auto;
+}
+form input[type='submit']:hover {
+  border-color: #112d2e;
+}
+form input[type='submit']:focus {
+  background: #115054;
+  outline-color: transparent;
+}
+
+div.userDB {
+  background: darkcyan;
+  min-width: 450px;
+  max-width: 550px;
+}
+table {
+  text-align: left;
+  color: #fff;
+}
+table th {
+  font-family: ubuntu, arial;
+  font-size: 1.4em;
+  padding: 3px 5px;
+}
+table td {
+  padding: 3px 5px;
+  outline-color: aliceblue;
+}
+table thead th:last-child, table td:last-child {
+  padding-left: 20px;
+}
+table button {
+  line-height: 0;
+  padding: .8em 1.5em;
+  outline: none;
+}
+table button:active {
+  border-style: inset;
+}
+.message-container {
+  width: 315px;
+  min-height: 100px;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  text-align: right;
+}
+.message {
+  text-align: left;
+  min-width: 220px;
+  min-height: 50px;
+  top: 5px;
+  border-radius: 3px;
+  right: 10px;
+  cursor: default;
+  padding: 12px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.message.show {
+  display: inline-block;
+  animation: notificationShow .2s;
+}
+.message.show.info {
+  background: darkcyan;
+  border: 1px solid #4b6429;
+  border-left: 20px solid #4b6429;
+  color: white;
+}
+.message.show.warn {
+  color: #fcbd53;
+  background: #ad4f46;
+  border: 1px solid #923d3d;
+  border-left: 20px solid #7b0606;
+}
+.message .content {
+  font-weight: bold;
+}
+
+@keyframes notificationShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
