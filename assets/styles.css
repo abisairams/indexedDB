@@ -2,14 +2,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: default;
 }
 body {
   font-family: arial;
   font-size: 16px;
 }
 h2.header {
-  padding-bottom: 5px;
-  margin: 10px 20px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  background: #0b633a;
+  color: #f2b856;
   font-family: ubuntu, arial;
   font-size: 2em;
 }
