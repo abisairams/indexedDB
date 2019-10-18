@@ -109,8 +109,8 @@ function displayNewData(data) {
       del.onsuccess = function (e) {
         notification('User has been deleted', 'warn', 5000);
         tr.removeChild(target);
-      }  
-    }   
+      }
+    }
   };
 }
 function validate(e) {
@@ -127,7 +127,7 @@ function validate(e) {
       var id = e.target.result;
       var transaction = idb.read(db, 'users', id);
       transaction.onsuccess = function (e) {
-        notification('User has been registered.', 'info', 5000);
+        notification('New user registered', 'info', 5000);
         displayNewData(e.target.result);
       }
       transaction.onerror = error;
