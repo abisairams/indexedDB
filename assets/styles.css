@@ -11,7 +11,7 @@ body {
 h2.header {
   padding: 15px 20px;
   margin-bottom: 15px;
-  background: #0b633a;
+  background: #21714c;
   color: #f2b856;
   font-family: ubuntu, arial;
   font-size: 2em;
@@ -113,12 +113,12 @@ table button:active {
 }
 .message.show.info {
   background: darkcyan;
-  border: 1px solid #4b6429;
-  border-left: 20px solid #4b6429;
+  border: 1px solid #006253;
+  border-left: 20px solid #006253;
   color: white;
 }
 .message.show.warn {
-  color: #fcbd53;
+  color: #f5fe71;
   background: #ad4f46;
   border: 1px solid #923d3d;
   border-left: 20px solid #7b0606;
