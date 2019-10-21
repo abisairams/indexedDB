@@ -1,47 +1,16 @@
 const exportDBLnk = document.getElementById('export-db');
 const importDBLnk = document.getElementById('import-db');
+const optionsBtn  = document.getElementById('options');
+const modalOpt    = document.getElementById('modal-options');
 
-function error (e) {
-  var error = e.target.error
-  notification(`Error: ${error.message}`, 'warn', 10000);
-}
-function notification(message, type, time) {
-  const container = document.getElementById('message-container');
-  const box = document.createElement('div');
-  const content = document.createElement('span');
-
-  box.setAttribute('class', `message show ${type}`);
-  content.setAttribute('class', 'content');
-  content.textContent = message;
-
-  box.appendChild(content);
-  container.appendChild(box);
-  window.setTimeout(function () {
-    if (container.childElementCount > 0) {
-      container.removeChild(box);
+function toggleModal(e) {
+  if (modalOpt.className == 'modal fade-out') {
+    if (e.target == optionsBtn || e.target == optionsBtn.children[0]) {
+      modalOpt.className = 'modal fade-in';
     }
-  },time)
-  box.onclick = function () {
-    this.parentNode.removeChild(this);
-  };
-}
-
-const idb = new Idb();
-var request = idb.open('MyDB', 2, function (e) {
-  if(e)
-    db = e.target.result;
-    if (!db.objectStoreNames.contains('users')) {
-      db.createObjectStore('users', {keyPath: 'id', unique: true, autoIncrement: true});
-      db.onsuccess = function () {
-        notification('DB created', 'info', 2000);
-      }
-      db.onerror = error;
-    }
-});
-request.onerror = error;
-request.onsuccess = function (e) {
-  db = e.target.result;
-  setTimeout( e => { notification('App ready to use'.toUpperCase(), 'info', 5000)}, 200);
+  } else {
+    modalOpt.className = 'modal fade-out';
+  }
 }
 
 function exportDB(e) {
@@ -108,3 +77,4 @@ function importDB(data) {
 
 exportDBLnk.addEventListener('mouseover', exportDB, false);
 importDBLnk.addEventListener('change', validate, false);
+document.addEventListener('click', toggleModal, false);

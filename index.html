@@ -6,6 +6,7 @@
     <meta name="author" content="Abisai Ramos">
     <title>IndexedDB example</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="//localhost/sources/css/font-awesome.min.css">
   </head>
   <body>
     <h2 class="header">IndexedDB API</h2>
@@ -35,7 +36,18 @@
     <div class="message-container" id="message-container">
 
     </div>
+
+    <footer>
+      <div class="modal fade-out" id="modal-options">
+        <ul>
+          <li><a href="" id="export-db">Exportar DB</a></li>
+          <li><label for="import-db">Importar DB</label> <input id="import-db" type="file" name=""></li>
+        </ul>
+      </div>
+      <button class="option" id="options"><i class="fa fa-gear"></i></button>  
+    </footer>
     <script src="assets/indexedDB.js" charset="utf-8"></script>
     <script src="assets/code.js" charset="utf-8"></script>
+    <script src="assets/settings.js" charset="utf-8"></script>
   </body>
 </html>

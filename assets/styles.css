@@ -135,3 +135,94 @@ table button:active {
     opacity: 1;
   }
 }
+
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  overflow: hidden;
+}
+button.option {
+  float: right;
+  border: none;
+  background: #21714c;
+  font-size: 1.6em;
+  color: white;
+  line-height: 2.4em;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  transform: scale(0.8);
+}
+button.option:active {
+  background: #008b8b;
+}
+
+footer .modal {
+  /*display: none;*/
+  width: 160px;
+  border-radius: 3px;
+  background: #21714c;
+  padding: 10px 10px 20px 10px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 5px;
+}
+footer .modal.fade-in {
+  display: block;
+  animation: fade-in .5s;
+}
+footer .modal.fade-out {
+  display: none;
+  /*opacity: 1;*/
+}
+footer .modal ul {
+  list-style: none;
+  color: white;
+}
+footer .modal ul li {
+  margin-top: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+footer .modal ul li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+footer .modal ul li a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  padding: 7px;
+  cursor: pointer;
+  display: inline-block;
+}
+footer .modal ul li label {
+  padding: 7px;
+  width: 100%;
+  cursor: pointer;
+  display: inline-block;
+}
+footer .modal input[type="file"] {
+  display: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg) translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translateY(0px);
+}
+@keyframes fade-out {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translateY(-100px);
+  }
